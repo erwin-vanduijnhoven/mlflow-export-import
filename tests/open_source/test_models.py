@@ -218,7 +218,7 @@ def test_extract_no_run_id():
         pass
 
 def test_mlflow_artifacts_path_no_artifacts():
-    source = os.path.join("mlflow-artifacts")
+    source = os.path.join(_mlflow_artifacts_path_base)
     model_path = _extract_model_path(source, _run_id)
     assert model_path == ""
 
