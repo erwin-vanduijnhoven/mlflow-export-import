@@ -164,11 +164,11 @@ def _extract_model_path(source):
     :param source: 'source' field of registered model version
     :return: relative path to the model artifact
     """
-    pattern = "artifacts"
+    pattern = "artifacts/"
     idx = source.find(pattern)
     if idx == -1:
         return None
-    return source[1+idx+len(pattern):]
+    return source[idx+len(pattern):]
 
 
 def _set_source_tags_for_field(dct, tags):
